@@ -1,24 +1,19 @@
 import React from 'react';
-import { PureComponent } from 'react';
-
-
+import { useContext } from 'react';
 import { AppContext } from './AppContext';
 
-class UserInfo extends PureComponent {
+const UserInfo = () => {
+    const { isUserLogged } = useContext(AppContext);
     // optymalizacja
-    static contextType = AppContext;
+    const userLoggedInfo = isUserLogged ? 'zalogowany' : 'niezalogowany';
+    return (
+        <div>
 
-    render() {
-        const { isUserLogged} = this.context;
-        const userLoggedInfo = isUserLogged ? 'zalogowany' : 'niezalogowany';
-        return (
-            <div>
+            <p>Uzytownik jest  {userLoggedInfo}</p>
+        </div>
 
-                <p>Uzytownik jest  {userLoggedInfo}</p>
-            </div>
-
-        );
-    }
+    );
+}
     // render() {
     //     return (
     //         <AppContext.Consumer>
@@ -35,6 +30,6 @@ class UserInfo extends PureComponent {
     //     );
     // }
 
-}
+
 
 export default UserInfo;
