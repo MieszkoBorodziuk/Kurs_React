@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
-import { AppContext, defaultObject } from './AppContext';
+import React from 'react';
+import AppProvider from './AppContext';
 import Button from './Button';
-
 import UserInfo from './UserInfo';
 
 const App = () => {
-    const [isUserLogged, setIsUserLogged] = useState(defaultObject.isUserLogged);
+   
 
 
     // state = {
     //     isUserLogged: defaultObject.isUserLogged,
     // }
-    const toggleloggedState = () => setIsUserLogged(prevValue => !prevValue);
-
+    
     return (
         <div>
-            <AppContext.Provider value={{ isUserLogged, toggleloggedState }}>
+            <AppProvider>
                 <UserInfo />
                 <Button />
-            </AppContext.Provider>
+            </AppProvider>
         </div>
     );
 }

@@ -8,7 +8,6 @@ const UserInfo = () => {
     const userLoggedInfo = isUserLogged ? 'zalogowany' : 'niezalogowany';
     return (
         <div>
-
             <p>Uzytownik jest  {userLoggedInfo}</p>
         </div>
 
