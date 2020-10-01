@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import CreateRef from './createRef';
-
+import UseMemo from './useMemeo';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CreateRef />
+    <UseMemo />
   </React.StrictMode>,
   document.getElementById('root')
 );
