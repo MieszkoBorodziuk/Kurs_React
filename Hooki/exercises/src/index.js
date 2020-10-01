@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UseMemo from './useMemeo';
+import UseCallBackExample from './useCallback';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <UseMemo />
+    <UseCallBackExample />
   </React.StrictMode>,
   document.getElementById('root')
 );
